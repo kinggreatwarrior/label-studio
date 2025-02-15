@@ -94,7 +94,7 @@ export const CreateProject = ({ onClose }) => {
     const eventNameMap = {
       name: "project_name",
       import: "data_import",
-      config: "labeling_setup",
+      // config: "labeling_setup",
     };
     __lsa(`create_project.tab.${eventNameMap[step]}`);
   }, []);
@@ -110,7 +110,7 @@ export const CreateProject = ({ onClose }) => {
   const steps = {
     name: <span className={tabClass.mod({ disabled: !!error })}>Project Name</span>,
     import: <span className={tabClass.mod({ disabled: uploadDisabled })}>Data Import</span>,
-    config: "Labeling Setup",
+    // config: "Labeling Setup",
   };
 
   // name intentionally skipped from deps:
@@ -121,7 +121,7 @@ export const CreateProject = ({ onClose }) => {
     () => ({
       title: name,
       description,
-      label_config: config,
+      // label_config: config,
     }),
     [name, description, config],
   );
