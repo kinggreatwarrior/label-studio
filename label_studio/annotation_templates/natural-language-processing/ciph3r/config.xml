@@ -1,0 +1,185 @@
+<View>
+    <!-- Document/File Support -->
+    <Text name="text" value="$text"/>
+
+    <!-- Labels for all supported types -->
+    <Labels name="label" toName="text">
+        
+        <!-- <Label value="PERSON" background="#FF0000" description="Person names"/>
+        <Label value="US_DRIVER_LICENSE" background="#FFA500" description="US driver license numbers"/>
+        <Label value="EMAIL_ADDRESS" background="#FFFF00" description="Email addresses"/>
+        <Label value="CREDIT_CARD" background="#008000" description="Credit card numbers"/>
+        <Label value="CRYPTO" background="#00FFFF" description="Cryptocurrency addresses"/>
+        <Label value="IBAN_CODE" background="#0000FF" description="IBAN codes"/>
+        <Label value="IP_ADDRESS" background="#800080" description="IP addresses"/>
+        <Label value="MEDICAL_LICENSE" background="#FF00FF" description="Medical license numbers"/>
+        <Label value="US_BANK_NUMBER" background="#FF4500" description="US bank account numbers"/>
+        <Label value="US_ITIN" background="#FFD700" description="US ITIN numbers"/>
+        <Label value="US_SSN" background="#808080" description="US SSN numbers"/>
+        <Label value="US_PASSPORT" background="#008080" description="US passport numbers"/>
+        <Label value="LOCATION" background="#800000" description="Location names"/>
+        <Label value="ORGANIZATION" background="#FF1493" description="Organization names"/>
+        <Label value="DATE_TIME" background="#FF6347" description="Date and time"/>
+        <Label value="PHONE_NUMBER" background="#FF69B4" description="Phone numbers"/>
+        <Label value="NRP" background="#FFA07A" description="NRP numbers"/>
+        <Label value="URL" background="#FF7F50" description="URLs"/>
+        <Label value="ACCOUNT_NUMBER" background="#7FFF00" description="Account numbers"/>
+        <Label value="HEALTH_INSURANCE_ID_NUMBER" background="#6495ED" description="Health insurance ID numbers"/>
+        <Label value="MEDICATION" background="#DC143C" description="Medication names"/>
+        <Label value="MEDICAL_CONDITION" background="#00CED1" description="Medical conditions"/>
+        <Label value="USERNAME" background="#9400D3" description="Usernames"/>
+        <Label value="REGISTRATION_NUMBER" background="#FF8C00" description="Registration numbers"/>
+        <Label value="STUDENT_ID_NUMBER" background="#FFDAB9" description="Student ID numbers"/>
+        <Label value="FLIGHT_NUMBER" background="#B22222" description="Flight numbers"/>
+        <Label value="BLOOD_TYPE" background="#228B22" description="Blood types"/>
+        <Label value="CVV" background="#FF00FF" description="CVV numbers"/>
+        <Label value="CVC" background="#D2691E" description="CVC numbers"/>
+        <Label value="RESERVATION_NUMBER" background="#FFB6C1" description="Reservation numbers"/>
+        <Label value="SOCIAL_MEDIA_HANDLE" background="#8A2BE2" description="Social media handles"/>
+        <Label value="LICENSE_PLATE_NUMBER" background="#A52A2A" description="License plate numbers"/>
+        <Label value="POSTAL_CODE" background="#5F9EA0" description="Postal codes"/>
+        <Label value="SERIAL_NUMBER" background="#7FFF00" description="Serial numbers"/>
+        <Label value="VEHICLE_REGISTRATION_NUMBER" background="#D2691E" description="Vehicle registration numbers"/>
+        <Label value="CREDIT_CARD_BRAND" background="#FF4500" description="Credit card brands"/>
+        <Label value="VISA_NUMBER" background="#2E8B57" description="Visa numbers"/>
+        <Label value="INSURANCE_COMPANY" background="#FF6347" description="Insurance company names"/>
+        <Label value="IDENTITY_DOCUMENT_NUMBER" background="#FF69B4" description="Identity document numbers"/>
+        <Label value="TRANSACTION_NUMBER" background="#FF7F50" description="Transaction numbers"/>
+        <Label value="BIRTH_CERTIFICATE_NUMBER" background="#8B0000" description="Birth certificate numbers"/>
+        <Label value="TRAIN_TICKET_NUMBER" background="#FFD700" description="Train ticket numbers"/>
+        <Label value="FLIGHT_BOOKING_NUMBER" background="#FF4500" description="Flight booking numbers"/>
+        <Label value="MEDICAL_RECORD_NUMBER" background="#FF00FF" description="Medical record numbers"/>
+        <Label value="VEHICLE_IDENTIFICATION_NUMBER" background="#FF6347" description="Vehicle identification numbers"/>
+        <Label value="ADDRESS" background="#FF69B4" description="Addresses"/>
+        <Label value="ALLERGIES" background="#FF0000" description="Allergies"/>
+        <Label value="SURGICAL_HISTORY" background="#FFA500" description="Surgical history"/>
+        <Label value="PATIENT_ID" background="#FFD700" description="Patient ID numbers"/>
+        <Label value="PROVIDER_ID" background="#FF4500" description="Provider ID numbers"/>
+        <Label value="DOB" background="#FF6347" description="Date of birth"/>
+         -->
+        
+        <Label value="PERSON" description="Person names"/>
+        <Label value="US_DRIVER_LICENSE" description="US driver license numbers"/>
+        <Label value="EMAIL_ADDRESS" description="Email addresses"/>
+        <Label value="CREDIT_CARD" description="Credit card numbers"/>
+        <Label value="CRYPTO" description="Cryptocurrency addresses"/>
+        <Label value="IBAN_CODE" description="IBAN codes"/>
+        <Label value="IP_ADDRESS" description="IP addresses"/>
+        <Label value="MEDICAL_LICENSE" description="Medical license numbers"/>
+        <Label value="US_BANK_NUMBER" description="US bank account numbers"/>
+        <Label value="US_ITIN" description="US ITIN numbers"/>
+        <Label value="US_SSN" description="US SSN numbers"/>
+        <Label value="US_PASSPORT" description="US passport numbers"/>
+        <Label value="LOCATION" description="Location names"/>
+        <Label value="ORGANIZATION" description="Organization names"/>
+        <Label value="DATE_TIME" description="Date and time"/>
+        <Label value="PHONE_NUMBER" description="Phone numbers"/>
+        <Label value="NRP" description="NRP numbers"/>
+        <Label value="URL" description="URLs"/>
+        <Label value="ACCOUNT_NUMBER" description="Account numbers"/>
+        <Label value="HEALTH_INSURANCE_ID_NUMBER" description="Health insurance ID numbers"/>
+        <Label value="MEDICATION" description="Medication names"/>
+        <Label value="MEDICAL_CONDITION" description="Medical conditions"/>
+        <Label value="USERNAME" description="Usernames"/>
+        <Label value="REGISTRATION_NUMBER" description="Registration numbers"/>
+        <Label value="STUDENT_ID_NUMBER" description="Student ID numbers"/>
+        <Label value="FLIGHT_NUMBER" description="Flight numbers"/>
+        <Label value="BLOOD_TYPE" description="Blood types"/>
+        <Label value="CVV" description="CVV numbers"/>
+        <Label value="CVC" description="CVC numbers"/>
+        <Label value="RESERVATION_NUMBER" description="Reservation numbers"/>
+        <Label value="SOCIAL_MEDIA_HANDLE" description="Social media handles"/>
+        <Label value="LICENSE_PLATE_NUMBER" description="License plate numbers"/>
+        <Label value="POSTAL_CODE" description="Postal codes"/>
+        <Label value="SERIAL_NUMBER" description="Serial numbers"/>
+        <Label value="VEHICLE_REGISTRATION_NUMBER" description="Vehicle registration numbers"/>
+        <Label value="CREDIT_CARD_BRAND" description="Credit card brands"/>
+        <Label value="VISA_NUMBER" description="Visa numbers"/>
+        <Label value="INSURANCE_COMPANY" description="Insurance company names"/>
+        <Label value="IDENTITY_DOCUMENT_NUMBER" description="Identity document numbers"/>
+        <Label value="TRANSACTION_NUMBER" description="Transaction numbers"/>
+        <Label value="BIRTH_CERTIFICATE_NUMBER" description="Birth certificate numbers"/>
+        <Label value="TRAIN_TICKET_NUMBER" description="Train ticket numbers"/>
+        <Label value="FLIGHT_BOOKING_NUMBER" description="Flight booking numbers"/>
+        <Label value="MEDICAL_RECORD_NUMBER" description="Medical record numbers"/>
+        <Label value="VEHICLE_IDENTIFICATION_NUMBER" description="Vehicle identification numbers"/>
+        <Label value="ADDRESS" description="Addresses"/>
+        <Label value="ALLERGIES" description="Allergies"/>
+        <Label value="SURGICAL_HISTORY" description="Surgical history"/>
+        <Label value="PATIENT_ID" description="Patient ID numbers"/>
+        <Label value="PROVIDER_ID" description="Provider ID numbers"/>
+        <Label value="DOB" description="Date of birth"/>
+    </Labels>
+    
+    <!-- Optional notes -->
+    <TextArea name="notes" 
+              toName="text" 
+              placeholder="Add notes here..." 
+              maxSubmissions="1"/>
+</View>
+
+<!-- {"data": {
+  "text": "A Florida restaurant paid 10,925 pounds ($16,935) for the draft of \"Ain't no telling\", which Hendrix penned on a piece of London hotel stationery in late 1966."
+},
+"annotations": [{"result":
+[
+    {
+        "value": {
+            "start": 2,
+            "end": 9,
+            "text": "Florida",
+            "labels": [
+                "LOC"
+            ]
+        },
+        "id": "eKp4GFOe0i",
+        "from_name": "label",
+        "to_name": "text",
+        "type": "labels"
+    },
+    {
+        "value": {
+            "start": 68,
+            "end": 84,
+            "text": "Ain't no telling",
+            "labels": [
+                "MISC"
+            ]
+        },
+        "id": "5TX2lN7gpf",
+        "from_name": "label",
+        "to_name": "text",
+        "type": "labels"
+    },
+    {
+        "value": {
+            "start": 93,
+            "end": 100,
+            "text": "Hendrix",
+            "labels": [
+                "PER"
+            ]
+        },
+        "id": "vvCi3V1YiS",
+        "from_name": "label",
+        "to_name": "text",
+        "type": "labels"
+    },
+    {
+        "value": {
+            "start": 122,
+            "end": 128,
+            "text": "London",
+            "labels": [
+                "LOC"
+            ]
+        },
+        "id": "09r8VxrAe2",
+        "from_name": "label",
+        "to_name": "text",
+        "type": "labels"
+    }
+]
+}]
+}
+-->

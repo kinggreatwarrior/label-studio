@@ -442,7 +442,7 @@ class ReImportAPI(ImportAPI):
     def sync_reimport(self, project, file_upload_ids, files_as_tasks_list):
         start = time.time()
         tasks, found_formats, data_columns = FileUpload.load_tasks_from_uploaded_files(
-            project, file_upload_ids, files_as_tasks_list=files_as_tasks_list
+            project, file_upload_ids, files_as_tasks_list=files_as_tasks_list, anonymize=True
         )
 
         with transaction.atomic():

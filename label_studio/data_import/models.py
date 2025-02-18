@@ -16,9 +16,9 @@ from django.conf import settings
 from django.db import models
 from django.utils.functional import cached_property
 from rest_framework.exceptions import ValidationError
+import requests
 
 logger = logging.getLogger(__name__)
-
 
 def upload_name_generator(instance, filename):
     project = str(instance.project_id)
@@ -72,6 +72,10 @@ class FileUpload(models.Model):
             body = self.file.read().decode('utf-8')
             setattr(self, '_file_body', body)
         return body
+    
+    @property
+    def anonymize(self):
+        return False
 
     def read_tasks_list_from_csv(self, sep=','):
         logger.debug('Read tasks list from CSV file {}'.format(self.filepath))
@@ -85,9 +89,20 @@ class FileUpload(models.Model):
     def read_tasks_list_from_txt(self):
         logger.debug('Read tasks list from text file {}'.format(self.filepath))
         lines = self.content.splitlines()
-        tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in lines]
-        return tasks
+        if self.anonymize==None:
+            tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in lines]        
+        elif self.anonymize:
+            newLines = []
+            logger.info('Anonymizing data')
+            for line in lines:
+                #a = ciph3r_anonymize.process_document({"document":line})
+                #logger.debug('Response from API: {}'.format(a))
+                a = requests.post(f'{settings.ANONYMIZATION_API_BASE_URL}/shield', headers={'accept': 'application/json', 'clientkey': settings.ANONYMIZATION_CLIENT_KEY, 'apikey': settings.ANONYMIZATION_API_KEY, 'Content-Type': 'application/json'}, json={"req_id": "string", "payload_text": line, "fields_to_ignore": "string", "language": "string", "options": "string"}).json() 
+                newLines.append(a['response_text'])
+            tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in newLines]
 
+        return tasks
+    
     def read_tasks_list_from_json(self):
         logger.debug('Read tasks list from JSON file {}'.format(self.filepath))
 
@@ -158,12 +173,12 @@ class FileUpload(models.Model):
 
     @classmethod
     def load_tasks_from_uploaded_files(
-        cls, project, file_upload_ids=None, formats=None, files_as_tasks_list=True, trim_size=None
+        cls, project, file_upload_ids=None, formats=None, files_as_tasks_list=True, trim_size=None, anonymize=None
     ):
         tasks = []
         fileformats = []
         common_data_fields = set()
-
+        cls.anonymize = anonymize
         # scan all files
         file_uploads = FileUpload.objects.filter(project=project)
         if file_upload_ids:
