@@ -89,9 +89,8 @@ class FileUpload(models.Model):
     def read_tasks_list_from_txt(self):
         logger.debug('Read tasks list from text file {}'.format(self.filepath))
         lines = self.content.splitlines()
-        if self.anonymize==None:
-            tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in lines]        
-        elif self.anonymize:
+                  
+        if self.anonymize and settings.ANONYMIZE_TASKS_TEXT:
             newLines = []
             logger.info('Anonymizing data')
             for line in lines:
@@ -100,7 +99,9 @@ class FileUpload(models.Model):
                 a = requests.post(f'{settings.ANONYMIZATION_API_BASE_URL}/shield', headers={'accept': 'application/json', 'clientkey': settings.ANONYMIZATION_CLIENT_KEY, 'apikey': settings.ANONYMIZATION_API_KEY, 'Content-Type': 'application/json'}, json={"req_id": "string", "payload_text": line, "fields_to_ignore": "string", "language": "string", "options": "string"}).json() 
                 newLines.append(a['response_text'])
             tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in newLines]
-
+        else:
+            tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in lines]  
+            
         return tasks
     
     def read_tasks_list_from_json(self):
