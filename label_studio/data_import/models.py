@@ -96,7 +96,7 @@ class FileUpload(models.Model):
             for line in lines:
                 #a = ciph3r_anonymize.process_document({"document":line})
                 #logger.debug('Response from API: {}'.format(a))
-                a = requests.post(f'{settings.ANONYMIZATION_API_BASE_URL}/shield', headers={'accept': 'application/json', 'clientkey': settings.ANONYMIZATION_CLIENT_KEY, 'apikey': settings.ANONYMIZATION_API_KEY, 'Content-Type': 'application/json'}, json={"req_id": "string", "payload_text": line, "fields_to_ignore": "string", "language": "string", "options": "string"}).json() 
+                a = requests.post(f'{settings.ANONYMIZATION_API_BASE_URL}/shield', headers={'accept': 'application/json', 'clientkey': settings.ANONYMIZATION_CLIENT_KEY, 'apikey': settings.ANONYMIZATION_API_KEY, 'Content-Type': 'application/json'}, json={"req_id": "string", "payload_text": line, "fields_to_ignore": "BLOOD TYPE", "language": "string", "options": "string"}).json() 
                 newLines.append(a['response_text'])
             tasks = [{'data': {settings.DATA_UNDEFINED_NAME: line}} for line in newLines]
         else:
