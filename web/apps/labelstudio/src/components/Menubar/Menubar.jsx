@@ -135,7 +135,7 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
         <div className={menubarClass}>
           <Dropdown.Trigger dropdown={menuDropdownRef} closeOnClickOutside={!sidebarPinned}>
             <div className={`${menubarClass.elem("trigger")} main-menu-trigger`}>
-              <img src={absoluteURL("/static/icons/logo.svg")} alt="CIPH3R Studio Logo" height="22" />
+              <img src={absoluteURL("/static/icons/logo.png")} alt="CIPH3R" height="75"/>Label Studio
               <Hamburger opened={sidebarOpened} />
             </div>
           </Dropdown.Trigger>
