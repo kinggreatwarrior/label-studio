@@ -1,6 +1,6 @@
 {
-  "message": "fix: OPTIC-1709: Ensure checks for feature flag enablement are done correctly (#7121)",
-  "commit": "459ffbf8e7a133c938453ae21b689dd28280b5ea",
-  "date": "2025-02-20T22:35:54.000Z",
+  "message": "fix: DIA-2022: UI&UX | Issue with zoom functionality in Label Studio labelling UI (#7182)",
+  "commit": "f59505dbbe1b9f4eb7433a872f6f354fbc8b1f43",
+  "date": "2025-03-07T18:30:10.000Z",
   "branch": "develop"
 }
