@@ -135,7 +135,7 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
         <div className={menubarClass}>
           <Dropdown.Trigger dropdown={menuDropdownRef} closeOnClickOutside={!sidebarPinned}>
             <div className={`${menubarClass.elem("trigger")} main-menu-trigger`}>
-              <img src={absoluteURL("/static/icons/logo.png")} alt="CIPH3R" height="75"/>Label Studio
+              <img src={absoluteURL("/static/icons/logo.png")} alt="CIPH3R" width="80"/>Label Studio
               <Hamburger opened={sidebarOpened} />
             </div>
           </Dropdown.Trigger>
@@ -189,6 +189,8 @@ export const Menubar = ({ enabled, defaultOpened, defaultPinned, children, onSid
                 {isFF(FF_HOMEPAGE) && <Menu.Item label="Home" to="/" icon={<IconHome />} data-external exact />}
                 <Menu.Item label="Projects" to="/projects" icon={<IconFolder />} data-external exact />
                 <Menu.Item label="Organization" to="/organization" icon={<IconPersonInCircle />} data-external exact />
+                {/* <Menu.Item label="LLM Chat" to="/chat" icon={<IconTerminal />} data-external exact /> */}
+                
 
                 <Menu.Spacer />
 

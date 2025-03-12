@@ -30,6 +30,7 @@ _api_urlpattens = [
 urlpatterns = [
     path('organization/', views.simple_view, name='organization-simple'),
     path('organization/webhooks', views.simple_view, name='organization-simple-webhooks'),
+    path('organization/chat', views.simple_view, name='organization-simple-chat'),
     path('people/', include(_urlpatterns)),
     # TODO: temporary route, remove as needed
     path('models/', views.simple_view, name='models'),

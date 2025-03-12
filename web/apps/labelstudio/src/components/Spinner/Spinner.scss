@@ -1,8 +1,10 @@
+
 .spinner-ls {
   --spinner-size: 50px;
   --corner-size: calc(var(--spinner-size) * 0.375);
   --spinner-duration: 2.5s;
   --spinner-color: #df0101;
+  
 
   position: relative;
   width: var(--spinner-size);

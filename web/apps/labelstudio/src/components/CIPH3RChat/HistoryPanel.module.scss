@@ -1,0 +1,14 @@
+.historyPanel {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .historyEntry {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+  }
